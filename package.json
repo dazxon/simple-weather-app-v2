@@ -1,7 +1,7 @@
 {
   "name": "simple-weather-app",
-  "version": "0.1.0",
-  "homepage": "https://dazxon.github.io/simple-weather-app-v1",
+  "version": "2.0.0",
+  "homepage": "https://dazxon.github.io/simple-weather-app-v2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

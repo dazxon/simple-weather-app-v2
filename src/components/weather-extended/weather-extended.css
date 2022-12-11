@@ -1,0 +1,22 @@
+.weather-top-extended {
+    display: flex;
+    font-size: 0.8em;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+  }
+  
+  .toggle-container {
+    text-align: center;
+  }
+  
+  .toggle-container :hover {
+    color: red;
+  }
+  
+  .toggle-button {
+    font-size: 0.7em;
+  }

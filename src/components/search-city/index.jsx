@@ -2,6 +2,10 @@ import React from "react";
 import "./search-city.css";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
+import {
+  WEATHER_GEO_MIN_POPULATION,
+  WEATHER_GEO_URL,
+} from "../../apiData/search-city-api";
 
 function SearchCity({ onSearchChange }) {
   const [search, setSearch] = useState(null);
@@ -17,7 +21,7 @@ function SearchCity({ onSearchChange }) {
   const loadOptions = (inputValue) => {
     return (
       fetch(
-        `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+        `${WEATHER_GEO_URL}minPopulation=${WEATHER_GEO_MIN_POPULATION}&namePrefix=${inputValue}`,
         options
       )
         .then((response) => response.json())

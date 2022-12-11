@@ -1,4 +1,6 @@
 import React from "react";
+import { WeatherExtended } from "../weather-extended";
+import './forecast-weather.css'
 
 const ForecastWeather = ({ forecast }) => {
 
@@ -10,7 +12,7 @@ const ForecastWeather = ({ forecast }) => {
 
   function getDayNumber(timestamp) {
     const day = new Date(timestamp);
-    return day.getDate()
+    return day.getDate();
   }
 
   function getMaxTemp(day) {
@@ -48,10 +50,9 @@ const ForecastWeather = ({ forecast }) => {
 
     for (let i = 0; i < 5; i++) {
       result.push(
-        <div className="weather-bottom-container scale-up-center" key={i}>
+        <div className="" key={i}>
           <h3 className="weather-bottom-day">
-            {getDay(forecast.list[i * 8].dt_txt)}
-            {" "}
+            {getDay(forecast.list[i * 8].dt_txt)}{" "}
             {getDayNumber(forecast.list[i * 8].dt_txt)}
           </h3>
           <img
@@ -61,6 +62,8 @@ const ForecastWeather = ({ forecast }) => {
           />
           <h4 className="weather-bottom-max-temp">{getMaxTemp(i)}°</h4>
           <h6 className="weather-bottom-min-temp">{getMinTemp(i)}°</h6>
+
+          
         </div>
       );
     }
@@ -68,7 +71,12 @@ const ForecastWeather = ({ forecast }) => {
     return [result];
   }
 
-  return [forecastDayCreator()];
+  return [
+
+    <div className="weather-bottom-container slide-in-top">
+      {forecastDayCreator()}
+    </div>
+  ];
 };
 
 export { ForecastWeather };

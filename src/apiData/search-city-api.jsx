@@ -1,14 +1,10 @@
-//`http://api.openweathermap.org/geo/1.0/direct?q=${"london"}&limit=${GEO_LIMIT}&appid=${WEATHER_KEY}` GEO
+export const WEATHER_CURRENT_URL = "https://api.openweathermap.org/data/2.5/weather?"
 
-//`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_KEY}` CURRENT
-
-//f0ac48c023e32613bacd77d915bcf70d KEY
-
-//`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_KEY}` FORECAST
+export const WEATHER_FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast?"
 
 export const WEATHER_KEY = "f0ac48c023e32613bacd77d915bcf70d"
 
-export const GEO_LIMIT = "2"
+export const WEATHER_GEO_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?"
 
-
+export const WEATHER_GEO_MIN_POPULATION = "100000"
 
