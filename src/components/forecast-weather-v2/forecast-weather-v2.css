@@ -1,6 +1,6 @@
 .weather-forecast-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     max-width: 450px;
     margin: 10px auto;
     align-items: center;
@@ -9,4 +9,52 @@
 .weather-img{
     height: 30px;
     width: 30px;
+}
+
+.weather-max-min-container{
+    display: flex;
+}
+
+.weather-bottom-day{
+    text-align: center;
+}
+
+.weather-bottom-day p{
+    font-size: 0.5em;
+    font-weight: 500;
+}
+
+.status[forecast-day='0']{
+    
+    -webkit-animation: slide-in-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    
+}
+
+.status[forecast-day='1']{
+    
+    -webkit-animation: slide-in-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    
+}
+
+.status[forecast-day='2']{
+    
+    -webkit-animation: slide-in-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    
+}
+
+.status[forecast-day='3']{
+    
+    -webkit-animation: slide-in-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    
+}
+
+.status[forecast-day='4']{
+    
+    -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    
 }

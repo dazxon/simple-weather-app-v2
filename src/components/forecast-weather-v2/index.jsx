@@ -101,6 +101,7 @@ const ForecastWeatherV2 = ({ forecast }) => {
       visibility: getData(e, "visibility"),
       wind_speed: getData(e, "wind_speed"),
       clouds: getData(e, "clouds"),
+
     };
   };
 
@@ -110,9 +111,10 @@ const ForecastWeatherV2 = ({ forecast }) => {
     for (let i = 0; i < 5; i++) {
       result.push(
         <div
-          className="CardWeather"
+          className="CardWeather slide-in-top status"
           key={i}
           onClick={() => setToggleContainer(!toggleContainer)}
+          forecast-day={i}
         >
           <div className="weather-forecast-container">
             <img
@@ -123,13 +125,16 @@ const ForecastWeatherV2 = ({ forecast }) => {
             <h3 className="weather-bottom-day">
               {getDay(forecast.list[i * 8].dt_txt)}{" "}
               {getDayNumber(forecast.list[i * 8].dt_txt)}
+              <p>{forecast.list[i * 8].weather[0].description}</p>
             </h3>
-            <h4 className="weather-bottom-max-temp">
-              {getData(i, "max_temp")}°
-            </h4>
-            <h6 className="weather-bottom-min-temp">
-              {getData(i, "min_temp")}°
-            </h6>
+            <div className="weather-max-min-container">
+              <h4 className="weather-bottom-max-temp">
+                {getData(i, "max_temp")}°
+              </h4>
+              <h6 className="weather-bottom-min-temp">
+                {getData(i, "min_temp")}°
+              </h6>
+            </div>
           </div>
 
           {toggleContainer && <WeatherExtended data={handleForecast(i)} />}

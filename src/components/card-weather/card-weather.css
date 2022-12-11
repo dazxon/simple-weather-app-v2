@@ -4,7 +4,7 @@
 }
 
 .CardWeather {
-  border: 1px solid rgba(0, 0, 0, .0001);
+  border: 1px solid rgba(0, 0, 0, 0.0001);
   border-radius: 5px;
   box-shadow: 0px 0px 5px 5px rgba(163, 160, 160, 1);
   font-family: "Roboto", sans-serif;
@@ -18,9 +18,11 @@
 
 .weather-top {
   display: flex;
-  justify-content: space-between;
-  height: 50px;
-  background-color: whitesmoke;
+  justify-content: space-around;
+  max-width: 450px;
+  margin: 10px auto;
+  align-items: center;
+  text-align: center;
 }
 
 .weather-top-left {
@@ -161,8 +163,8 @@ h3 {
 }
 
 .slide-in-top {
-  -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .vibrate-1 {
@@ -170,11 +172,9 @@ h3 {
   animation: vibrate-1 0.3s linear infinite both;
 }
 
-
 /* MEDIA QUERYS */
 @media screen and (max-width: 600px) {
-  
-  .CardWeather{
+  .CardWeather {
     max-width: 600px;
   }
 }
