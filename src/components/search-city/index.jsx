@@ -5,18 +5,11 @@ import { useState } from "react";
 import {
   WEATHER_GEO_MIN_POPULATION,
   WEATHER_GEO_URL,
+  options,
 } from "../../apiData/search-city-api";
 
 function SearchCity({ onSearchChange }) {
   const [search, setSearch] = useState(null);
-
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "939cc349c5msha4623937a7cd2e6p1ff222jsn994beeaf6335",
-      "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
-    },
-  };
 
   const loadOptions = (inputValue) => {
     return (
@@ -55,7 +48,7 @@ function SearchCity({ onSearchChange }) {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
-      className="searchBar scale-up-top"
+      className="searchBar"
     />
   );
 }
