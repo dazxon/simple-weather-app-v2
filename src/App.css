@@ -63,3 +63,31 @@
   -webkit-animation: scale-up-center 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
+
+.img-sunny-day {
+  background-image: url("../public/bg-images/01d.jpg");
+}
+
+.img-sunny-night{
+  background-image: url("../public/bg-images/01n.jpg");
+  color: rgba(245, 245, 245, 0.733);
+}
+
+.img-scattered-day {
+  background-image: url("../public/bg-images/02d.jpg");
+}
+
+.img-scattered-night{
+  background-image: url("../public/bg-images/02n.jpg");
+  color: rgba(245, 245, 245, 0.733);
+}
+
+.img-few-day {
+  background-image: url("../public/bg-images/03d.jpg");
+}
+
+.img-few-night {
+  background-image: url("../public/bg-images/03n.jpg");
+  color: rgba(245, 245, 245, 0.733);
+}
+

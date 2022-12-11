@@ -1,14 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 import './weather-extended.css'
 
 const WeatherExtended = ({ data }) => {
 
-    const [toggleContainer, setToggleContainer] = useState(false);
-
     return(
 
-      <div className='WeatherExtended' onClick={() => setToggleContainer(!toggleContainer)}>
+      <div className='WeatherExtended'>
       
             <div className="weather-top-extended">
               <div className="weather-top-extended-left">
@@ -35,6 +32,9 @@ const WeatherExtended = ({ data }) => {
                 </p>
               </div>
             </div>
+
+
+
           {/* {toggleContainer && (
             <div className="toggle-container vibrate-1">
               <i

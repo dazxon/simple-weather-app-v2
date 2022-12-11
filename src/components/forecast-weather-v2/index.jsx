@@ -1,11 +1,8 @@
 import React from "react";
-import { useState } from "react";
 import { WeatherExtended } from "../weather-extended";
 import "./forecast-weather-v2.css";
 
 const ForecastWeatherV2 = ({ forecast }) => {
-  const [toggleContainer, setToggleContainer] = useState(false);
-
   function getDay(timestamp) {
     const day = new Date(timestamp);
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -93,7 +90,7 @@ const ForecastWeatherV2 = ({ forecast }) => {
     }
   }
 
-  const handleForecast = (e) => {
+  let handleForecast = (e) => {
     return {
       feels_like: getData(e, "feels_like"),
       humidity: getData(e, "humidity"),
@@ -101,9 +98,38 @@ const ForecastWeatherV2 = ({ forecast }) => {
       visibility: getData(e, "visibility"),
       wind_speed: getData(e, "wind_speed"),
       clouds: getData(e, "clouds"),
-
     };
   };
+
+  function handleToggle(i) {
+    document.getElementById(i).classList.toggle("hide");
+  }
+
+  function getBgImage(e) {
+    switch (e) {
+
+      case "01d":
+        return "img-sunny-day";
+
+      case "01n":
+        return "img-sunny-day";
+
+      case "02d":
+        return "img-scattered-day";
+
+      case "02n":
+        return "img-scattered-day";
+
+      case "03d":
+        return "img-few-day";
+
+      case "03n":
+        return "img-few-day";
+
+      default:
+        break;
+    }
+  }
 
   function forecastDayCreator() {
     let result = [];
@@ -111,9 +137,9 @@ const ForecastWeatherV2 = ({ forecast }) => {
     for (let i = 0; i < 5; i++) {
       result.push(
         <div
-          className="CardWeather slide-in-top status"
+          className={`CardWeather animation ${getBgImage(forecast.list[i * 8].weather[0].icon)}`}
           key={i}
-          onClick={() => setToggleContainer(!toggleContainer)}
+          onClick={() => handleToggle(i)}
           forecast-day={i}
         >
           <div className="weather-forecast-container">
@@ -137,7 +163,9 @@ const ForecastWeatherV2 = ({ forecast }) => {
             </div>
           </div>
 
-          {toggleContainer && <WeatherExtended data={handleForecast(i)} />}
+          <div id={i} className="hide">
+            <WeatherExtended data={handleForecast(i)} />
+          </div>
         </div>
       );
     }
