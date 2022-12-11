@@ -1,6 +1,6 @@
 {
   "name": "simple-weather-app",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://dazxon.github.io/simple-weather-app-v2",
   "private": true,
   "dependencies": {

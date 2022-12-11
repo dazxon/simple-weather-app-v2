@@ -87,7 +87,7 @@ const ForecastWeatherV2 = ({ forecast }) => {
         }
         aux = aux / 8;
         return Math.round(aux);
-        
+
       default:
         break;
     }
@@ -116,7 +116,7 @@ const ForecastWeatherV2 = ({ forecast }) => {
         >
           <div className="weather-forecast-container">
             <img
-              className="weather-bottom-img"
+              className="weather-img"
               src={`icons/${forecast.list[i * 8].weather[0].icon}.png`}
               alt=""
             />

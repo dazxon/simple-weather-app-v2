@@ -5,3 +5,8 @@
     margin: 10px auto;
     align-items: center;
 }
+
+.weather-img{
+    height: 30px;
+    width: 30px;
+}
