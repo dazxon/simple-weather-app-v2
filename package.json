@@ -1,6 +1,6 @@
 {
   "name": "simple-weather-app",
-  "version": "2.0.5npm",
+  "version": "2.1.0npm",
   "homepage": "https://dazxon.github.io/simple-weather-app-v2",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "axios": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-geolocated": "^4.0.3",
     "react-scripts": "5.0.1",
     "react-select-async-paginate": "^0.7.0",
     "web-vitals": "^2.1.4"

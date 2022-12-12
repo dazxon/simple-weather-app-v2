@@ -1,47 +1,4 @@
 .App {
-  padding-top: 20px;
   height: 100vh;
+  padding-top: 5px;
 }
-
-.img-sunny-day {
-  background-image: url("../public/bg-images/01d.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.img-sunny-night{
-  background-image: url("../public/bg-images/01n.jpg");
-  color: rgba(245, 245, 245, 1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-shadow: 0px 0px 30px rgba(255, 0, 0, 1);
-}
-
-.img-scattered-day {
-  background-image: url("../public/bg-images/02d.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.img-scattered-night{
-  background-image: url("../public/bg-images/02n.jpg");
-  color: rgba(245, 245, 245, 1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-shadow: 0px 0px 30px rgba(255, 0, 0, 1);
-}
-
-.img-few-day {
-  background-image: url("../public/bg-images/03d.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.img-few-night {
-  background-image: url("../public/bg-images/03n.jpg");
-  color: rgba(245, 245, 245, 1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-shadow: 0px 0px 30px rgba(255, 0, 0, 1);
-}
-

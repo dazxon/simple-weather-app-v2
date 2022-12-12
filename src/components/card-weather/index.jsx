@@ -6,36 +6,10 @@ import { WeatherExtended } from "../weather-extended";
 function CardWeather({ data }) {
   const [toggleContainer, setToggleContainer] = useState(false);
 
-  function getBgImage() {
-    switch (data.icon) {
-
-      case "01d":
-        return "img-sunny-day";
-
-      case "01n":
-        return "img-sunny-night";
-
-      case "02d":
-        return "img-scattered-day";
-
-      case "02n":
-        return "img-scattered-night";
-
-      case "03d":
-        return "img-few-day";
-
-      case "03n":
-        return "img-few-night";
-
-      default:
-        break;
-    }
-  }
-
   return (
     <>
       <div
-        className={`CardWeather slide-in-top ${getBgImage()}`}
+        className={`CardWeather box-shadow slide-in-top`}
         onClick={() => setToggleContainer(!toggleContainer)}
       >
         <div className="weather-top-container ">

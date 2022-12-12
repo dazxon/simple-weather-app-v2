@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.box-shadow{
+  margin-bottom: 15px;
+}
+
 .weather-top {
   display: flex;
   justify-content: space-around;
