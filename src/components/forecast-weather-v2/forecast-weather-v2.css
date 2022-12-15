@@ -21,6 +21,7 @@
 
 .weather-max-min-container {
   display: flex;
+  font-size: 1.4em;
 }
 
 .weather-bottom-day {
@@ -30,6 +31,10 @@
 .weather-bottom-day p {
   font-size: 0.5em;
   font-weight: 500;
+}
+
+.weather-bottom-max-temp{
+  padding-right: 5px;
 }
 
 .animation[forecast-day="0"] {

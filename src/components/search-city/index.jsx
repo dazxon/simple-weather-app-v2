@@ -35,6 +35,7 @@ function SearchCity({ onSearchChange }) {
   };
 
   const handleOnChange = (searchData) => {
+    console.log("boca boca boca");
     setSearch(searchData);
     onSearchChange(searchData);
   };

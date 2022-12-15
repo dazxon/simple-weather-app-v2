@@ -105,39 +105,13 @@ const ForecastWeatherV2 = ({ forecast }) => {
     document.getElementById(i).classList.toggle("hide");
   }
 
-  function getBgImage(e) {
-    switch (e) {
-
-      case "01d":
-        return "img-sunny-day";
-
-      case "01n":
-        return "img-sunny-day";
-
-      case "02d":
-        return "img-scattered-day";
-
-      case "02n":
-        return "img-scattered-day";
-
-      case "03d":
-        return "img-few-day";
-
-      case "03n":
-        return "img-few-day";
-
-      default:
-        break;
-    }
-  }
-
   function forecastDayCreator() {
     let result = [];
 
     for (let i = 0; i < 5; i++) {
       result.push(
         <div
-          className={`CardWeather animation ${getBgImage(forecast.list[i * 8].weather[0].icon)}`}
+          className={`CardWeather animation`}
           key={i}
           onClick={() => handleToggle(i)}
           forecast-day={i}

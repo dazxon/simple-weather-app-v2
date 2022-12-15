@@ -28,10 +28,7 @@ function App() {
   // geoWeather useState
   const [geoWeather, setGeoWeather] = useState(null);
 
-  // geo location available
-  const [geoLocationEnabled, setGeoLocationEnabled] = useState(false);
-
-  const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+  const { coords} =
 
     useGeolocated({
       positionOptions: {
@@ -75,7 +72,6 @@ function App() {
 
         // IF GEOLOCATED IS ENABLED
         if (response[2] !== 0) {
-          setGeoLocationEnabled(true)
           const geoResponse = await response[2].json();
           console.log(geoResponse)
           setGeoWeather({
@@ -119,9 +115,9 @@ function App() {
   };
 
   // FOR TESTING
-  // console.log(currentWeather);
-  // console.log(forecastWeather);
-  // console.log(geoWeather);
+  console.log(currentWeather);
+  console.log(forecastWeather);
+  console.log(geoWeather);
 
   // this set the style for de background country flag
   const countryBg = {

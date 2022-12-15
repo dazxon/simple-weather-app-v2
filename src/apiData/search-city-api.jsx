@@ -9,7 +9,8 @@ export const WEATHER_KEY = "f0ac48c023e32613bacd77d915bcf70d";
 export const WEATHER_GEO_URL =
   "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?";
 
-export const WEATHER_GEO_MIN_POPULATION = "100000";
+export const WEATHER_GEO_MIN_POPULATION = "1";
+// TEMPORALY IS ONE, I DONT KNOW WHY WAS MAKING TROUBLE, MY HEAD HURTS
 
 export const options = {
   method: "GET",
@@ -19,4 +20,4 @@ export const options = {
   },
 };
 
-export const FLAG_URL = "https://countryflagsapi.com/svg/"
+export const FLAG_URL = "https://countryflagsapi.com/svg/";
